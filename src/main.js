@@ -8,6 +8,7 @@ import moment from 'moment-timezone'
 import Lang from 'vue-lang'
 import Icon from 'vue-awesome/components/Icon'
 import VueAnalytics from 'vue-analytics'
+import * as tf from '@tensorflow/tfjs'
 
 import 'bulma/css/bulma.css'
 import 'vue-awesome/icons/flag'
@@ -21,6 +22,7 @@ var locales = {
   'en': require('./locale/en.json')
 }
 
+Vue.prototype.$tf = tf
 Vue.component('v-icon', Icon)
 Vue.use(VueMoment, { moment })
 Vue.use(Lang, {lang: 'en', locales: locales})
