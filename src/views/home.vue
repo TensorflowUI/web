@@ -7,19 +7,40 @@
     </div>
     <div class="columns">
       <div class="column">
-        <h2><a href="https://js.tensorflow.org" target="_blank" alt="Tensorflow">Tensorflow.js</a> Machine Learning Model</h2>
+        <h2>Create your machine learning model via <a href="https://js.tensorflow.org" target="_blank" alt="Tensorflow">Tensorflow.js</a></h2>
+        <h2><strong>No coding required!</strong></h2>
       </div>
     </div>
     <div class="columns">
       <div class="column">
         <div class="field has-addons">
           <p class="control" v-on:click="ga('New ML')">
-            <a class="button is-medium">
-              <span class="icon is-small">
-                <v-icon name="plus"></v-icon>
-              </span>
-              <span>New</span>
-            </a>
+            <div class="dropdown" v-bind:class="{'is-active': newActive}">
+              <div class="dropdown-trigger" v-on:click="newActive = !newActive">
+                <div class="button is-medium" aria-haspopup="true" aria-controls="dropdown-menu2">
+                  <span class="icon is-small">
+                    <v-icon name="plus"></v-icon>
+                  </span>
+                  <span>New</span>
+                </div>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+                <div class="dropdown-content">
+                  <a href="#/new/imageClassification" class="dropdown-item">
+                    <p><strong>Image Classification</strong><br /> Teach a machine to recognize 
+                    images.</p>
+                  </a>
+                  <!-- <hr class="dropdown-divider">
+                  <a href="#/new/textClassification" class="dropdown-item">
+                    <p><strong>Text Classification</strong><br /> Lorem ipsum dolar sit amet.</p>
+                  </a> -->
+                  <hr class="dropdown-divider">
+                  <a href="#/docs" class="dropdown-item">
+                    Documantation
+                  </a>
+                </div>
+              </div>
+            </div>
           </p>
           <p class="control" v-on:click="ga('Load ML')">
             <a class="button is-medium" disabled>
@@ -45,6 +66,8 @@ export default {
   name: 'home',
   data () {
     return {
+      newActive: false,
+      loadActive: false
     }
   },
   methods: {
@@ -67,5 +90,14 @@ export default {
 .has-addons {
   margin: 0 auto;
   width: fit-content;
+}
+.dropdown {
+  text-align: left;
+}
+.dropdown-menu {
+  width: 250px;
+}
+a.dropdown-item {
+  white-space: normal;
 }
 </style>
