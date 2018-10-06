@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@handsontable/vue": "^3.0.0",
+    "@tensorflow/tfjs": "^0.13.1",
     "bulma": "^0.7.1",
     "handsontable": "^5.0.2",
     "moment-timezone": "^0.5.16",
