@@ -8,7 +8,7 @@
     <div class="columns">
       <div class="column">
         <h2>Create your machine learning model via <a href="https://js.tensorflow.org" target="_blank" alt="Tensorflow">Tensorflow.js</a></h2>
-        <h2><strong>No coding required!</strong></h2>
+        <h2><strong>Open Source & No coding required!</strong></h2>
       </div>
     </div>
     <div class="columns">

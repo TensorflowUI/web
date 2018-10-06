@@ -12,8 +12,10 @@
       <div v-show="selectedTab == 0">
         <div class="columns is-gapless">
           <div class="column is-narrow import-data">
-            <video id="webcam" autoplay playsinline muted width="224" height="224"></video>
-            <div class="button is-primary is-medium" v-on:click="setExampleData" v-bind:class="{'is-loading': !addButton}">Add Photo</div>
+            <div class="camera">
+              <video id="webcam" autoplay playsinline muted width="224" height="224"></video>
+              <div class="button is-primary is-medium" v-on:click="setExampleData" v-bind:class="{'is-loading': !addButton}">Add Photo</div>
+            </div>
           </div>
           <div class="column is-1">
             <a class="panel-block is-active">
@@ -28,6 +30,11 @@
             <a class="panel-block">
               label 4
             </a>
+            <div class="panel-block">
+              <button class="button is-link is-outlined is-fullwidth">
+                reset all data
+              </button>
+            </div>
           </div>
           <div class="column">
             <template v-for="item in items">
@@ -138,5 +145,10 @@ export default {
 <style scoped>
 .import-data {
   max-width: 300px;
+}
+.camera {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px !important;
 }
 </style>
