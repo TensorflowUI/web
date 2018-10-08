@@ -26,14 +26,13 @@
               </div>
               <div class="dropdown-menu" id="dropdown-menu2" role="menu">
                 <div class="dropdown-content">
-                  <a href="#/new/imageClassification" class="dropdown-item">
-                    <p><strong>Image Classification</strong><br /> Teach a machine to recognize 
-                    images.</p>
+                  <router-link to="/new/imageClassification" class="dropdown-item">
+                    <p><strong>Image Classification</strong><br /> Teach a machine to recognize images.</p>
+                  </router-link>
+                  <hr class="dropdown-divider">
+                  <a class="dropdown-item is-disabled" >
+                    <p><strong>Text Classification</strong><br /> Under development.</p>
                   </a>
-                  <!-- <hr class="dropdown-divider">
-                  <a href="#/new/textClassification" class="dropdown-item">
-                    <p><strong>Text Classification</strong><br /> Lorem ipsum dolar sit amet.</p>
-                  </a> -->
                   <hr class="dropdown-divider">
                   <a href="#/docs" class="dropdown-item">
                     Documantation
@@ -82,10 +81,10 @@ export default {
   text-align: center;
 }
 .start {
-  padding: 50px 0;
+  padding: 30px 0;
 }
 .tensorflow {
-  max-width: 200px;
+  max-width: 120px;
 }
 .has-addons {
   margin: 0 auto;
@@ -99,5 +98,13 @@ export default {
 }
 a.dropdown-item {
   white-space: normal;
+}
+@media only screen and (min-width: 600px) { 
+  .start {
+    padding: 50px 0;
+  }
+  .tensorflow {
+    max-width: 200px;
+  }
 }
 </style>

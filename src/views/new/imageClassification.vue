@@ -16,30 +16,21 @@
               <video id="webcam" autoplay playsinline muted width="224" height="224"></video>
               <div class="button is-primary is-medium" v-on:click="setExampleData" v-bind:class="{'is-loading': !addButton}">Add Photo</div>
             </div>
+            {{ num_classes }}
           </div>
-          <div class="column is-1">
-            <a class="panel-block is-active">
-              Label 1
-            </a>
-            <a class="panel-block">
-              Label 2
-            </a>
-            <a class="panel-block">
-              label 3
-            </a>
-            <a class="panel-block">
-              label 4
-            </a>
-            <div class="panel-block">
+          <div class="column is-1 label-list">
+            <div v-for="i in num_classes">
+              <a class="panel-block" v-on:click="selectedLabel = i" v-bind:class="{'is-active': selectedLabel === i }">
+              Label {{ i }}
+              </a>  
+            </div>
+            <!-- <div class="panel-block">
               <button class="button is-link is-outlined is-fullwidth">
                 reset all data
               </button>
-            </div>
+            </div> -->
           </div>
           <div class="column">
-            <template v-for="item in items">
-              Label
-            </template>
             <div class="columns is-multiline is-mobile">
               <div v-for="uuid in images[selectedLabel]" class="column is-2">
                 <canvas :ref="'thumb-' + uuid" width="224" height="224"></canvas>
@@ -150,5 +141,10 @@ export default {
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 10px !important;
+  margin-right: 10px;
 }
+.label-list {
+  min-width: 150px;
+}
+
 </style>
