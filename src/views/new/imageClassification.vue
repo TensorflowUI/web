@@ -52,6 +52,13 @@ export default {
   components: {
     ClassesNumber
   },
+  metaInfo: {
+    title: 'Image Classification',
+    titleTemplate: '%s - TensorFlowUI',
+    meta: [
+      {name: 'description', content: 'Your machine learning model api.'}
+    ]
+  },
   data () {
     return {
       selectedTab: 0,

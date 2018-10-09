@@ -9,6 +9,7 @@ import Lang from 'vue-lang'
 import Icon from 'vue-awesome/components/Icon'
 import VueAnalytics from 'vue-analytics'
 import VueResource from 'vue-resource'
+import Meta from 'vue-meta'
 
 import * as tf from '@tensorflow/tfjs'
 import * as marked from 'marked'
@@ -36,6 +37,7 @@ Vue.prototype.$marked = marked
 Vue.component('v-icon', Icon)
 Vue.use(VueResource)
 Vue.http.options.emulateJSON = true
+Vue.use(Meta)
 Vue.use(VueMoment, { moment })
 Vue.use(Lang, {lang: 'en', locales: locales})
 Vue.use(VueAnalytics, {
