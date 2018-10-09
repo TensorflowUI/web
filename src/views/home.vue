@@ -81,10 +81,10 @@ export default {
   text-align: center;
 }
 .start {
-  padding: 30px 0;
+  padding: 75px 0 10px 0;
 }
 .tensorflow {
-  max-width: 120px;
+  max-width: 250px;
 }
 .has-addons {
   margin: 0 auto;
@@ -101,10 +101,10 @@ a.dropdown-item {
 }
 @media only screen and (min-width: 600px) { 
   .start {
-    padding: 50px 0;
+    padding: 80px 0 20px 0;
   }
   .tensorflow {
-    max-width: 200px;
+    max-width: 350px;
   }
 }
 </style>
