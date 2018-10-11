@@ -1,6 +1,6 @@
 <template>
   <div class="github-tag">
-    <a href="https://github.com/tensorflowUI" target="_blank" v-on:click="ga">
+    <a href="https://github.com/tensorflowUI" rel="noreferrer" target="_blank" alt="Github TensorflowUI" v-on:click="ga">
       <img class="github" alt="Github">
     </a>
   </div>
