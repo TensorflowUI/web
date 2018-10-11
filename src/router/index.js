@@ -4,6 +4,7 @@ import Home from '@/views/home'
 import Api from '@/views/api'
 import Docs from '@/views/docs'
 import Example from '@/views/example'
+import ImageClassification from '@/views/new/imageClassification'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/example',
       name: 'Example',
       component: Example
+    },
+    {
+      path: '/new/imageClassification',
+      name: 'imageClassification',
+      component: ImageClassification
     }
   ]
 })
