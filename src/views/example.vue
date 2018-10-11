@@ -6,6 +6,13 @@
 <script>
 export default {
   name: 'example',
+  metaInfo: {
+    title: 'Examples',
+    titleTemplate: '%s - TensorFlow UI',
+    meta: [
+      {name: 'description', content: 'Tensorflow UI and Tensorflow.js examples.'}
+    ]
+  },
   data () {
     return {
     }

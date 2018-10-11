@@ -8,7 +8,7 @@ export default {
   name: 'api',
   metaInfo: {
     title: 'Api',
-    titleTemplate: '%s - TensorFlowUI',
+    titleTemplate: '%s - TensorFlow UI',
     meta: [
       {name: 'description', content: 'Your machine learning model api.'}
     ]

@@ -56,7 +56,7 @@ export default {
     title: 'Image Classification',
     titleTemplate: '%s - TensorFlowUI',
     meta: [
-      {name: 'description', content: 'Your machine learning model api.'}
+      {name: 'description', content: 'Image classification via Tensorflow UI.'}
     ]
   },
   data () {

@@ -8,6 +8,13 @@
 import service from '@/service'
 export default {
   name: 'docs',
+  metaInfo: {
+    title: 'Documents',
+    titleTemplate: '%s - TensorFlow UI',
+    meta: [
+      {name: 'description', content: 'Tensorflow UI documents.'}
+    ]
+  },
   data () {
     return {
       bodyText: ''

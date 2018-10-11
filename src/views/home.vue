@@ -63,6 +63,12 @@
 <script>
 export default {
   name: 'home',
+  metaInfo: {
+    title: 'TensorFlow UI',
+    meta: [
+      {name: 'description', content: 'Create your machine learning model via Tensorflow.js. Open Source & No coding required!'}
+    ]
+  },
   data () {
     return {
       newActive: false,
