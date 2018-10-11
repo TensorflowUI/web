@@ -6,6 +6,13 @@
 <script>
 export default {
   name: 'api',
+  metaInfo: {
+    title: 'Api',
+    titleTemplate: '%s - TensorFlowUI',
+    meta: [
+      {name: 'description', content: 'Your machine learning model api.'}
+    ]
+  },
   data () {
     return {
     }

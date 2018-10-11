@@ -5,10 +5,12 @@ import Api from '@/views/api'
 import Docs from '@/views/docs'
 import Example from '@/views/example'
 import ImageClassification from '@/views/new/imageClassification'
+import Sketch from '@/views/new/sketch'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -34,6 +36,11 @@ export default new Router({
       path: '/new/imageClassification',
       name: 'imageClassification',
       component: ImageClassification
+    },
+    {
+      path: '/new/sketch',
+      name: 'sketch',
+      component: Sketch
     }
   ]
 })

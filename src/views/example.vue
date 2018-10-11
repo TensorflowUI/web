@@ -11,10 +11,6 @@ export default {
     }
   },
   mounted () {
-    console.log('tensor flow example')
-    console.log(this.$tf)
-    // Pass an array of values to create a vector.
-    this.$tf.tensor([1, 2, 3, 4]).print()
   }
 }
 </script>
