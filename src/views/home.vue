@@ -7,7 +7,7 @@
     </div>
     <div class="columns">
       <div class="column">
-        <h2>Create your machine learning model via <a href="https://js.tensorflow.org" target="_blank" alt="Tensorflow">Tensorflow.js</a></h2>
+        <h2>Create your machine learning model via <a href="https://js.tensorflow.org" rel="noreferrer" target="_blank" alt="Tensorflow" v-on:click="ga('js.tensorflow')">Tensorflow.js</a></h2>
         <h2><strong>Open Source & No coding required!</strong></h2>
       </div>
     </div>
@@ -63,6 +63,12 @@
 <script>
 export default {
   name: 'home',
+  metaInfo: {
+    title: 'TensorFlow UI',
+    meta: [
+      {name: 'description', content: 'Create your machine learning model via Tensorflow.js. Open Source & No coding required!'}
+    ]
+  },
   data () {
     return {
       newActive: false,
