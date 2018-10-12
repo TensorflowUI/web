@@ -7,7 +7,7 @@
     </div>
     <div class="columns">
       <div class="column">
-        <h2>Create your machine learning model via <a href="https://js.tensorflow.org" rel="noreferrer" target="_blank" alt="Tensorflow" v-on:click="ga('js.tensorflow')">Tensorflow.js</a></h2>
+        <h2>Create your machine learning model via <a href="https://js.tensorflow.org" rel="noreferrer" class="tensorflowjs" target="_blank" alt="Tensorflow JS" v-on:click="ga('js.tensorflow')">Tensorflow.js</a></h2>
         <h2><strong>Open Source & No coding required!</strong></h2>
       </div>
     </div>
@@ -104,6 +104,10 @@ export default {
 }
 a.dropdown-item {
   white-space: normal;
+}
+a.tensorflowjs {
+  color: #0043b1;
+  text-decoration: underline;
 }
 @media only screen and (min-width: 600px) { 
   .start {
