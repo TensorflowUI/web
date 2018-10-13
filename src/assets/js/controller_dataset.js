@@ -32,7 +32,7 @@ export class ControllerDataset {
    *     an activation, or any other type of Tensor.
    * @param {number} label The label of the example. Should be a number.
    */
-  addExample (example, label, cb) {
+  addExample (example, label) {
     // One-hot encode the label.
     const y = tf.tidy(
       () => tf.oneHot(tf.tensor1d([label]).toInt(), this.numClasses))
@@ -55,6 +55,5 @@ export class ControllerDataset {
       oldY.dispose()
       y.dispose()
     }
-    cb()
   }
 }

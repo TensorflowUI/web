@@ -25,12 +25,13 @@ export default {
   },
   data () {
     return {
-      number: 4
+      number: 2
     }
   },
   methods: {
     setNumber: function () {
-      this.$emit('input', this.number)
+      var arr = Array.apply(null, Array(Number(this.number))).map(Number.prototype.valueOf, 0)
+      this.$emit('input', arr)
     }
   }
 }
