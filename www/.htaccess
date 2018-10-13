@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+
+  Header set Connection keep-alive
+  # WEEK
+  <FilesMatch "\.(jpg|jpeg|png|svg|gif|swf)$">
+    Header set Cache-Control "max-age=86400, public"
+  </FilesMatch>
+
+  # WEEK
+  <FilesMatch "\.(js|css|swf)$">
+    Header set Cache-Control "max-age=86400"
+  </FilesMatch>
+</IfModule>

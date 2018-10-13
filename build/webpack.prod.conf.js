@@ -14,6 +14,7 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const loadMinified = require('./load-minified')
+// const PrerenderSpaPlugin = require('prerender-spa-plugin')
 
 const env = config.build.env
 
@@ -65,7 +66,10 @@ const webpackConfig = merge(baseWebpackConfig, {
       minify: {
         removeComments: true,
         collapseWhitespace: true,
-        removeAttributeQuotes: true
+        removeAttributeQuotes: true,
+        minifyCSS: true,
+        minifyJS: true,
+        removeEmptyAttributes: true
         // more options:
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
@@ -96,6 +100,12 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     // copy custom static assets
     new CopyWebpackPlugin([
+      // .www path all files
+      {
+        from: path.resolve(__dirname, '../www'),
+        to: path.resolve(__dirname, '../dist/')
+        // ignore: ['.*']
+      },
       {
         from: path.resolve(__dirname, '../static'),
         to: config.build.assetsSubDirectory,
@@ -109,7 +119,13 @@ const webpackConfig = merge(baseWebpackConfig, {
       staticFileGlobs: ['dist/**/*.{js,html,css}'],
       minify: true,
       stripPrefix: 'dist/'
-    })
+    }),
+    // new PrerenderSpaPlugin(
+    //   // Path to compiled app
+    //   path.join(__dirname, '../dist'),
+    //   // List of endpoints you wish to prerender
+    //   [ '/' ]
+    // )
   ]
 })
 

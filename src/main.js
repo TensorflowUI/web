@@ -22,6 +22,7 @@ import 'vue-awesome/icons/flag'
 import 'vue-awesome/icons'
 import 'handsontable/dist/handsontable.full.css'
 import './assets/css/style.css'
+import './assets/js/app.js'
 
 require('moment/locale/tr')
 var locales = {
